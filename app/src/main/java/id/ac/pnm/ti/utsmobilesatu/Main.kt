@@ -10,11 +10,11 @@ fun main() {
     val clubs = listOf(liverpool, manUnited, chelsea, manCity, arsenal)
 
     val sortedClubs = sortClubsByTotalTrophies(clubs)
-    println("Klub-kub yang telah diurutkan berdasarkan jumlah total trofi:")
+    println("Klub-klub yang telah diurutkan berdasarkan jumlah total trofi:")
     sortedClubs.forEach { club ->
         println("${club.name}: ${club.totalTrophies}")
     }
-    println("=".repeat(140)) // Garis pemisah
+    println("=".repeat(50)) // Garis pemisah
 
     val filteredClubs = filterClubs(clubs) { clubList ->
         clubList.filter { club ->
@@ -22,11 +22,11 @@ fun main() {
         }
     }
 
-    println("\nKlub-kub yang belum pernah memenangkan trofi Liga Champions dan Liga Eropa UEFA:")
+    println("\nKlub-klub yang belum pernah memenangkan trofi Liga Champions dan Liga Eropa UEFA:")
     filteredClubs.forEach { club ->
         println(club.name)
     }
-    println("=".repeat(140)) // Garis pemisah
+    println("=".repeat(50)) // Garis pemisah
 
     clubs.forEach { club ->
         club.displayTrophySummary()
